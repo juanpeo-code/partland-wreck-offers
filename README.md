@@ -1,6 +1,6 @@
 # Partland Vehicle Check-in
 
-A mobile-friendly intake app for vehicles Partland has already purchased and received. Record vehicle identity and supplier, capture arrival photos, complete receipt checks and enter the assigned stock number.
+A mobile-friendly intake app for vehicles Partland has already purchased and received. Record vehicle identity and supplier, complete receipt checks, attach photos to individual checklist items and enter the assigned stock number.
 
 ## Live app
 
@@ -21,7 +21,7 @@ A mobile-friendly intake app for vehicles Partland has already purchased and rec
 - Windscreen, windows and mirrors checked
 - Tyres and wheels checked
 
-Yard staff can add reusable checks from a vehicle record. A newly added check appears on every vehicle and starts unchecked.
+Yard staff can add reusable checks from a vehicle record. A newly added check appears on every vehicle and starts unchecked. Open any vehicle for a full-page check sheet. Add evidence photos beside a particular check (for example, battery, headlamps or NATIS papers), then tap a thumbnail to view it larger or move through the photo set.
 
 Once every check is complete and the stock number is entered, the vehicle is marked checked into current stock.
 

@@ -35,6 +35,7 @@
           <div class="topbar-actions"><span class="today-label" id="today-label"></span><button class="avatar" aria-label="Yard team">Y</button></div>
         </header>
         <section class="content" id="content">
+          <div id="stock-home">
           <div class="page-heading"><div><div class="eyebrow"><span class="live-dot"></span>YARD WORKSPACE <span class="eyebrow-sep">/</span> <span id="heading-eyebrow">CURRENT STOCK</span></div><h1 id="page-title">Vehicle check-in<span class="title-period">.</span></h1><p class="page-subtitle" id="page-subtitle">Capture each purchased vehicle, check it on arrival and record its stock number.</p></div><button class="button button-primary" id="new-vehicle"><span class="plus">＋</span> Record vehicle</button></div>
           <div class="stats-grid" id="stats-grid"></div>
           <section class="workspace-card">
@@ -44,13 +45,13 @@
             <div id="empty-state" class="empty-state" hidden><div class="empty-icon">⌕</div><h3>No vehicles found</h3><p>Try another search or record a received vehicle.</p><button class="button button-secondary" id="empty-add">Record a vehicle</button></div>
           </section>
           <footer class="page-footer"><span>PARTLAND AUTO PARTS <span class="footer-dot">·</span> EST. 1988</span><span>Receipt checks are recorded by your yard team.</span></footer>
+          </div>
+          <section class="vehicle-page" id="vehicle-page" hidden></section>
         </section>
       </main>
       <div class="mobile-overlay" id="mobile-overlay"></div>
     </div>
 
-    <div class="drawer-backdrop" id="drawer-backdrop"></div>
-    <aside class="detail-drawer" id="detail-drawer" aria-label="Vehicle check-in" aria-hidden="true"></aside>
     <div class="modal-backdrop" id="modal-backdrop"><section class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
       <div class="modal-head"><div><div class="eyebrow">YARD WORKSPACE <span class="eyebrow-sep">/</span> NEW STOCK RECORD</div><h2 id="modal-title">Record a received vehicle</h2></div><button class="icon-button" id="modal-close" aria-label="Close">×</button></div>
       <p class="modal-intro">Capture a vehicle already purchased and received. You can complete its checks and add arrival photos after saving.</p>
@@ -64,7 +65,9 @@
       </form>
     </section></div>
     <input type="file" id="photo-input" accept="image/*" capture="environment" multiple hidden />
+    <div class="photo-lightbox" id="photo-lightbox" aria-hidden="true"><button class="lightbox-close" data-action="close-lightbox" aria-label="Close photo">×</button><button class="lightbox-arrow lightbox-prev" data-action="previous-photo" aria-label="Previous photo">‹</button><figure><img id="lightbox-image" alt="Vehicle check evidence" /><figcaption id="lightbox-caption"></figcaption></figure><button class="lightbox-arrow lightbox-next" data-action="next-photo" aria-label="Next photo">›</button></div>
     <div class="toast" id="toast" role="status"></div>
     <script type="module" src="./src/app.js"></script>
   </body>
 </html>
+
