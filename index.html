@@ -8,6 +8,7 @@
     <link rel="manifest" href="./manifest.webmanifest" />
     <link rel="icon" href="./public/partland-logo.jpg" />
     <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="./google-sync.css" />
     <title>Vehicle Check-in · Partland Auto Parts</title>
   </head>
   <body>
@@ -25,7 +26,7 @@
           <button class="nav-item" data-view="checked"><span class="nav-icon">✓</span>Checked</button>
         </nav>
         <div class="sidebar-tip"><span class="tip-spark">✳</span><div><b>Purchased. Received. Recorded.</b><p>Check the vehicle and paperwork before adding it to current stock.</p></div></div>
-        <div class="sidebar-footer"><span class="status-dot"></span>Saved on this device <span class="sync-label">· Local</span></div>
+        <div class="sidebar-footer"><span class="status-dot"></span><span id="google-status">Local only · not shared</span><button class="google-connect" id="google-connect" type="button">Connect Google</button></div>
       </aside>
 
       <main class="main-area">
@@ -67,6 +68,7 @@
     <input type="file" id="photo-input" accept="image/*" capture="environment" multiple hidden />
     <div class="photo-lightbox" id="photo-lightbox" aria-hidden="true"><button class="lightbox-close" data-action="close-lightbox" aria-label="Close photo">×</button><button class="lightbox-arrow lightbox-prev" data-action="previous-photo" aria-label="Previous photo">‹</button><figure><img id="lightbox-image" alt="Vehicle check evidence" /><figcaption id="lightbox-caption"></figcaption></figure><button class="lightbox-arrow lightbox-next" data-action="next-photo" aria-label="Next photo">›</button></div>
     <div class="toast" id="toast" role="status"></div>
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
     <script type="module" src="./src/app.js"></script>
   </body>
 </html>

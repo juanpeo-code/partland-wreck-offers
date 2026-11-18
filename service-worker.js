@@ -1,5 +1,5 @@
-const CACHE = 'partland-stock-checkin-shell-v4';
-const SHELL = ['./', './index.html', './styles.css', './manifest.webmanifest', './src/app.js', './public/partland-logo.jpg'];
+const CACHE = 'partland-stock-checkin-shell-v5';
+const SHELL = ['./', './index.html', './styles.css', './google-sync.css', './manifest.webmanifest', './src/app.js', './src/google-sync.js', './src/google-config.js', './public/partland-logo.jpg'];
 self.addEventListener('install', event => {
   event.waitUntil(caches.open(CACHE).then(cache => cache.addAll(SHELL)).then(() => self.skipWaiting()));
 });

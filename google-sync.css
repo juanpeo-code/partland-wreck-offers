@@ -1,0 +1,8 @@
+.sidebar-footer{display:grid;grid-template-columns:10px 1fr;align-items:center;gap:7px}
+.sidebar-footer .status-dot{margin:0}
+.sidebar-footer #google-status{min-width:0;overflow-wrap:anywhere;line-height:1.4}
+.google-connect{grid-column:2;justify-self:start;border:1px solid #ffffff35;background:#ffffff10;color:#fff;border-radius:5px;padding:7px 10px;font-size:10px;font-weight:700}
+.google-connect:hover{background:#ffffff20}
+.google-connect[data-state="connected"]{border-color:#4b956d;background:#214a3a}
+.google-connect[data-state="expired"],.google-connect[data-state="error"]{border-color:#b77755;background:#55342d}
+

@@ -29,9 +29,13 @@ Once every check is complete and the stock number is entered, the vehicle is mar
 
 Requires Node.js 20 or newer. Run `npm start`, then open http://localhost:4173. No package install is needed.
 
-## Prototype data
+## Google pilot sync
 
-The sample records are illustrative. Vehicle records and photos are stored in the current browser profile using `localStorage`; they are not shared or synced between staff or devices. This app is an intake log and does not connect to the existing stock system. Use a shared authenticated API and an integration with the stock system before relying on it for live inventory data.
+The app can sync vehicle records and custom checks to the shared Google Sheet, and upload check photos to the shared Drive folder. Each staff member signs in with their own Google account. Google permissions on the Sheet and folder control who can read or edit the pilot. Sync uses an append-only event log in the `PartlandData` tab, so simultaneous updates to separate vehicles do not overwrite each other. If two people edit the same vehicle at once, the latest saved version wins.
+
+Before sync can be enabled, finish the Google Cloud OAuth setup in [PILOT-SETUP.md](PILOT-SETUP.md) and add the OAuth Web client ID to `src/google-config.js`. That client ID is public in a browser app; do not put any client secret in this repository. A first connection to an empty Sheet asks whether to import this browser's locally saved records (which may include sample vehicles) or start with empty shared stock.
+
+Until the OAuth client ID is configured, the app continues to save only in the current browser profile. Local records are not shared automatically. Photos are uploaded to the shared Drive folder after Google connection; local-only records and photos stay on their originating device.
 
 ## Hosting and Android
 
