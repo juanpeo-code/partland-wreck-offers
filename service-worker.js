@@ -1,4 +1,4 @@
-const CACHE = 'partland-wreck-offers-shell-v1';
+const CACHE = 'partland-stock-checkin-shell-v2';
 const SHELL = ['./', './index.html', './styles.css', './manifest.webmanifest', './src/app.js', './public/partland-logo.jpg'];
 self.addEventListener('install', event => {
   event.waitUntil(caches.open(CACHE).then(cache => cache.addAll(SHELL)).then(() => self.skipWaiting()));

@@ -1,10 +1,22 @@
-# Partland Wreck Offers
+# Partland Vehicle Check-in
 
-A responsive, local-first web app for Partland Auto Parts. Keep every vehicle offer, seller answer, photo, manual offer and callback together through the arrival check.
+A mobile-friendly intake app for vehicles Partland has already purchased and received. Record vehicle identity and supplier, capture arrival photos, complete receipt checks and enter the assigned stock number.
 
 ## Live app
 
-[Open Partland Wreck Offers](https://juanpeo-code.github.io/partland-wreck-offers/)
+[Open Partland Vehicle Check-in](https://juanpeo-code.github.io/partland-wreck-offers/)
+
+## Receipt checks
+
+- Vehicle matches the received record
+- Registration matches paperwork
+- VIN / chassis number verified
+- Keys received and recorded
+- Original papers / NATIS checked
+- Condition and visible damage recorded
+- Arrival photos captured
+
+Once all seven checks are complete and the stock number is entered, the vehicle is marked checked into current stock.
 
 ## Local run
 
@@ -12,12 +24,8 @@ Requires Node.js 20 or newer. Run `npm start`, then open http://localhost:4173. 
 
 ## Prototype data
 
-The sample records are illustrative. Offers and photos are stored in the current browser profile using `localStorage`; they are not shared or synced between staff or devices. Clear this site's data to reset to the illustrative records. Connect an authenticated shared API before using it for live business records.
+The sample records are illustrative. Vehicle records and photos are stored in the current browser profile using `localStorage`; they are not shared or synced between staff or devices. This app is an intake log and does not connect to the existing stock system. Use a shared authenticated API and an integration with the stock system before relying on it for live inventory data.
 
-## Hosting and updates
+## Hosting and Android
 
-GitHub Pages deployment is configured in `.github/workflows/deploy.yml`. Once GitHub Pages is enabled with the **GitHub Actions** publishing source, pushes to `main` deploy automatically.
-
-## Android path
-
-The responsive interface, web app manifest and service worker support installation from a compatible mobile browser over HTTPS. For Play Store distribution, the app can be wrapped with Capacitor or a Trusted Web Activity. The data adapter currently uses browser storage and should be replaced with a shared API for team use.
+GitHub Pages deployment is configured in `.github/workflows/deploy.yml`; pushes to `main` deploy automatically. The responsive interface, web app manifest and service worker support installation from a compatible mobile browser over HTTPS. For Play Store distribution, this static app can be wrapped with Capacitor or a Trusted Web Activity.

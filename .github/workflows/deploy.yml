@@ -1,4 +1,4 @@
-name: Deploy Partland Wreck Offers to GitHub Pages
+name: Deploy Partland Vehicle Check-in to GitHub Pages
 
 on:
   push:

@@ -1,8 +1,8 @@
 {
   "id": "./",
-  "name": "Partland Wreck Offers",
-  "short_name": "Wreck Offers",
-  "description": "Partland Auto Parts vehicle offers and arrival checks",
+  "name": "Partland Vehicle Check-in",
+  "short_name": "Stock Check-in",
+  "description": "Partland Auto Parts purchased vehicle receipt checks and stock capture",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",
