@@ -15,8 +15,15 @@ A mobile-friendly intake app for vehicles Partland has already purchased and rec
 - Original papers / NATIS checked
 - Condition and visible damage recorded
 - Arrival photos captured
+- Battery present and condition checked
+- Headlamps and tail lamps checked
+- Bumpers and exterior panels inspected
+- Windscreen, windows and mirrors checked
+- Tyres and wheels checked
 
-Once all seven checks are complete and the stock number is entered, the vehicle is marked checked into current stock.
+Yard staff can add reusable checks from a vehicle record. A newly added check appears on every vehicle and starts unchecked.
+
+Once every check is complete and the stock number is entered, the vehicle is marked checked into current stock.
 
 ## Local run
 
@@ -29,3 +36,4 @@ The sample records are illustrative. Vehicle records and photos are stored in th
 ## Hosting and Android
 
 GitHub Pages deployment is configured in `.github/workflows/deploy.yml`; pushes to `main` deploy automatically. The responsive interface, web app manifest and service worker support installation from a compatible mobile browser over HTTPS. For Play Store distribution, this static app can be wrapped with Capacitor or a Trusted Web Activity.
+

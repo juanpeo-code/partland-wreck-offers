@@ -1,4 +1,4 @@
-const CACHE = 'partland-stock-checkin-shell-v2';
+const CACHE = 'partland-stock-checkin-shell-v3';
 const SHELL = ['./', './index.html', './styles.css', './manifest.webmanifest', './src/app.js', './public/partland-logo.jpg'];
 self.addEventListener('install', event => {
   event.waitUntil(caches.open(CACHE).then(cache => cache.addAll(SHELL)).then(() => self.skipWaiting()));
@@ -13,3 +13,4 @@ self.addEventListener('fetch', event => {
     return response;
   }).catch(() => caches.match('./index.html'))));
 });
+
