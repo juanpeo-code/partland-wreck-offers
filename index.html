@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en-ZA">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#10152d" />
+    <meta name="description" content="Partland Auto Parts Wreck Offers — keep every vehicle offer and arrival check in one place." />
+    <link rel="manifest" href="./manifest.webmanifest" />
+    <link rel="icon" href="./public/partland-logo.jpg" />
+    <link rel="stylesheet" href="./styles.css" />
+    <title>Wreck Offers · Partland Auto Parts</title>
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar" id="sidebar">
+        <a class="brand" href="#offers" aria-label="Partland Wreck Offers home">
+          <span class="brand-logo"><img src="./public/partland-logo.jpg" alt="Partland Auto Parts" /></span>
+          <span class="brand-caption">WRECK OFFERS</span>
+        </a>
+        <div class="sidebar-label">WORKSPACE</div>
+        <nav class="primary-nav" aria-label="Main navigation">
+          <button class="nav-item active" data-view="offers"><span class="nav-icon">▤</span>Offers <span class="nav-count" id="open-count">0</span></button>
+          <button class="nav-item" data-view="arrivals"><span class="nav-icon">◉</span>Arrival checks <span class="nav-count" id="arrival-count">0</span></button>
+          <button class="nav-item" data-view="completed"><span class="nav-icon">✓</span>Completed</button>
+        </nav>
+        <div class="sidebar-tip">
+          <span class="tip-spark">✳</span>
+          <div><b>One offer. One record.</b><p>Keep every answer, photo and callback with the vehicle.</p></div>
+        </div>
+        <div class="sidebar-footer"><span class="status-dot"></span>Saved on this device <span class="sync-label">· Local</span></div>
+      </aside>
+
+      <main class="main-area">
+        <header class="topbar">
+          <button class="mobile-menu icon-button" id="menu-button" aria-label="Open menu">☰</button>
+          <div class="breadcrumbs"><span>Partland Auto Parts</span><span class="crumb-slash">/</span><b id="crumb-current">Wreck offers</b></div>
+          <div class="topbar-actions"><span class="today-label" id="today-label"></span><button class="avatar" aria-label="Buyer profile">B</button></div>
+        </header>
+
+        <section class="content" id="content">
+          <div class="page-heading">
+            <div><div class="eyebrow"><span class="live-dot"></span>BUYING DESK <span class="eyebrow-sep">/</span> <span id="heading-eyebrow">INBOX</span></div><h1 id="page-title">Wreck offers<span class="title-period">.</span></h1><p class="page-subtitle" id="page-subtitle">Every offer, answer and photo together — from first message to yard.</p></div>
+            <button class="button button-primary" id="new-offer"><span class="plus">＋</span> New offer</button>
+          </div>
+
+          <div class="stats-grid" id="stats-grid"></div>
+
+          <section class="workspace-card">
+            <div class="toolbar">
+              <div class="filter-tabs" id="filter-tabs" aria-label="Filter offers">
+                <button class="filter-tab selected" data-filter="all">All <span id="filter-all-count"></span></button>
+                <button class="filter-tab" data-filter="new">New</button>
+                <button class="filter-tab" data-filter="callback">Callback</button>
+                <button class="filter-tab" data-filter="offer-made">Offer made</button>
+              </div>
+              <label class="search-box"><span>⌕</span><input id="search" type="search" placeholder="Search vehicles or sellers" /><kbd>⌘ K</kbd></label>
+            </div>
+            <div class="list-header"><span>VEHICLE &amp; SELLER</span><span>SOURCE</span><span>OFFER</span><span>LAST ACTIVITY</span><span>STAGE</span><span></span></div>
+            <div id="offer-list" class="offer-list"></div>
+            <div id="empty-state" class="empty-state" hidden><div class="empty-icon">⌕</div><h3>No offers found</h3><p>Try another search or add the first offer.</p><button class="button button-secondary" id="empty-add">Add an offer</button></div>
+          </section>
+          <footer class="page-footer"><span>PARTLAND AUTO PARTS <span class="footer-dot">·</span> EST. 1988</span><span>Offers are entered by a buyer. Nothing is priced automatically.</span></footer>
+        </section>
+      </main>
+      <div class="mobile-overlay" id="mobile-overlay"></div>
+    </div>
+
+    <div class="drawer-backdrop" id="drawer-backdrop"></div>
+    <aside class="detail-drawer" id="detail-drawer" aria-label="Offer details" aria-hidden="true"></aside>
+    <div class="modal-backdrop" id="modal-backdrop">
+      <section class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+        <div class="modal-head"><div><div class="eyebrow">BUYING DESK <span class="eyebrow-sep">/</span> NEW RECORD</div><h2 id="modal-title">Add an offer</h2></div><button class="icon-button" id="modal-close" aria-label="Close">×</button></div>
+        <p class="modal-intro">Enter the seller’s details and vehicle information. You can add answers, photos and your offer after saving.</p>
+        <form id="offer-form">
+          <div class="form-section-title">VEHICLE DETAILS</div>
+          <div class="form-grid"><label class="field span-2">Vehicle description <input name="vehicle" required placeholder="e.g. 2018 Toyota Hilux 2.4 GD-6" /></label><label class="field">Registration <input name="registration" placeholder="e.g. CA 123-456" /></label><label class="field">Mileage <input name="mileage" placeholder="e.g. 148 000 km" /></label></div>
+          <div class="form-section-title section-gap">SELLER &amp; SOURCE</div>
+          <div class="form-grid"><label class="field">Seller name <input name="seller" required placeholder="Full name" /></label><label class="field">Phone number <input name="phone" type="tel" placeholder="+27" /></label><label class="field">Offer came from <select name="source"><option>WhatsApp</option><option>Website form</option><option>Phone call</option><option>In person</option><option>Auction</option><option>Other</option></select></label><label class="field">Buyer <input name="buyer" placeholder="Your name" /></label></div>
+          <label class="field section-gap">Notes <textarea name="notes" rows="2" placeholder="Anything the next person should know…"></textarea></label>
+          <div class="modal-actions"><button type="button" class="button button-secondary" id="modal-cancel">Cancel</button><button class="button button-primary" type="submit">Save offer <span>→</span></button></div>
+        </form>
+      </section>
+    </div>
+    <input type="file" id="photo-input" accept="image/*" capture="environment" multiple hidden />
+    <div class="toast" id="toast" role="status"></div>
+    <script type="module" src="./src/app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,16 @@
+{
+  "id": "./",
+  "name": "Partland Wreck Offers",
+  "short_name": "Wreck Offers",
+  "description": "Partland Auto Parts vehicle offers and arrival checks",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f5f6f8",
+  "theme_color": "#10152d",
+  "orientation": "any",
+  "icons": [
+    { "src": "./public/partland-logo.jpg", "sizes": "192x192", "type": "image/jpeg", "purpose": "any" },
+    { "src": "./public/partland-logo.jpg", "sizes": "512x512", "type": "image/jpeg", "purpose": "any maskable" }
+  ]
+}
